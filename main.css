@@ -1,0 +1,121 @@
+tr, th, td{
+    padding: 5px;
+    border: solid 1px; 
+}
+
+table{
+    border: solid 2px;
+    margin: 0 auto;
+}
+
+body{
+    margin: 0 auto;
+    width: 50%;
+    background: #dedede;
+    font-size: 15px;
+    font-family: Verdana;
+}
+
+aside{
+    font-size: 22px;
+}
+
+h1{
+    margin: 0 auto;
+    width: 20%;
+    font-family: "Allerta Stencil";
+}
+
+footer{
+    bottom: 0;
+    margin-bottom: 5px;
+}
+
+#middle{
+	background:  #9ba39e;
+	padding: 5px;
+	font-family: arial;
+	font-size: 15px;
+	color: #000000;
+	border-bottom: none;
+	border-top: none;
+	color: rgb(255,255,255);
+}
+
+.info{
+    float: left;
+}
+.hlavicka{
+    position: relative;
+}
+.Prednaska{
+    background-color:greenyellow;
+}
+
+.Cvicenie{
+    background-color: aqua;
+}
+
+.Telesna{
+    background-color: yellow;
+}
+
+.Fotka{
+    float: left;
+    margin: 5px;
+}
+
+.button{
+	background-color: #9ba39e;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover{
+	background-color: white;
+    color: black;
+}
+
+.kontakt{
+    float: right;
+    display: block;
+}
+
+.kontakt label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.kontakt input{
+    width: 400px;
+    margin-bottom: 15px;
+    height: 30px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.kontakt textarea{
+    width: 395px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+.kontakt button{
+    display: block;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 15px;
+}
