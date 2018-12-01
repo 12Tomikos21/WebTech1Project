@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <title>Zadanie 1</title>
-    <link rel='stylesheet' type='text/css' href='main.css'/>
+    <title>WebTech1 Projekt</title>
     <link rel='shortcut icon' type='image/x-icon' href='images/blog.ico'/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
     <h1>WebTech1 Projekt</h1>
-    <nav>
-
-    </nav>
-    
+    <div id="nameday_area"></div>
+    <div id="menu_area" class="menu-area">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-light navbar-expand-lg mainmenu">
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="active"><a href="index.html">Domov</a></li>
+                            <li><a href="articles.html">Články</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="Zabava/index.html" id="dropDown1">Zábava</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" href="Zabava/Hry/index.html" id="dropDown2">Hry</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="Zabava/Hry/Macko/index.html">Hra Macko</a></li>
+                                            <li><a href="Zabava/Hry/Rener/index.html">Hra Rener</a></li>
+                                            <li><a href="Zabava/Hry/Hodor/index.html">Hra Hodor</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
 
     <footer>Copyright: 2018 Andrej Macko, Ivan Rener, Tomáš Hodor</footer>
 
