@@ -12,20 +12,24 @@
 </head>
 <body>
 <h1>Hry</h1>
+<div id="nameday_area"></div>
 <div id="menu_area" class="menu-area">
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-light navbar-expand-lg mainmenu">
-                <div class="collapse navbar-collapse" id="navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li><a href="../../index.html">Domov</a></li>
                         <li><a href="../../articles.html">Články</a></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="../index.html" id="dropDown1">Zábava</a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown active">
-                                    <a class="dropdown-toggle" href="index.html" id="dropDown2">Hry</a>
-                                    <ul class="dropdown-menu">
+                            <a class="dropdown-toggle" href="../index.html" id="zabavaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zábava</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" href="index.html" id="hryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hry</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a href="Macko/index.html">Hra Macko</a></li>
                                         <li><a href="Rener/index.html">Hra Rener</a></li>
                                         <li><a href="Hodor/index.html">Hra Hodor</a></li>
@@ -39,11 +43,6 @@
         </div>
     </div>
 </div>
-<ul>
-    <li><a href="#">Hra Macko</a></li>
-    <li><a href="#">Hra Rener</a></li>
-    <li><a href="Hodor/index.html">Hra Hodor</a></li>
-</ul>
 <footer>Copyright: 2018 Andrej Macko, Ivan Rener, Tomáš Hodor</footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

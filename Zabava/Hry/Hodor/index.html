@@ -11,23 +11,27 @@
 </head>
 <body>
 <h1>Hra Hodor</h1>
+<div id="nameday_area"></div>
 <div id="menu_area" class="menu-area">
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-light navbar-expand-lg mainmenu">
-                <div class="collapse navbar-collapse" id="navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li><a href="../../../index.html">Domov</a></li>
                         <li><a href="../../../articles.html">Články</a></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="dropDown1">Zábava</a>
-                            <ul class="dropdown-menu">
+                            <a class="dropdown-toggle" href="../index.html" id="zabavaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zábava</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle" href="#" id="dropDown2">Hry</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="index.html">Hra Macko</a></li>
+                                    <a class="dropdown-toggle" href="index.html" id="hryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hry</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a href="../Macko/index.html">Hra Macko</a></li>
                                         <li><a href="../Rener/index.html">Hra Rener</a></li>
-                                        <li class="active"><a href="../Hodor/index.html">Hra Hodor</a></li>
+                                        <li class="active"><a href="index.html">Hra Hodor</a></li>
                                     </ul>
                                 </li>
                             </ul>
