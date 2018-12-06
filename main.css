@@ -39,6 +39,10 @@
     min-height: 20px;
     width: 100%;
 }
+
+#nameday_area{
+    margin-left: 5px;
+}
 @media only screen and (min-width: 767px) {
     .mainmenu .collapse ul li:hover> ul{
         display:block
