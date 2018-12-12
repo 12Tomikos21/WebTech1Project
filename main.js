@@ -10,25 +10,24 @@ function loadXML() {
 }
 
 function getNameday(xml) {
-    var x, xmlDoc;
-    xmlDoc = xml.responseXML;
+    var x, xmlDoc = xml.responseXML;
 
-    var todaydd = new Date().getDate();
-    if(todaydd<10) {
+    let todaydd = new Date().getDate();
+    if(todaydd<10)
         todaydd = '0' + todaydd;
-    }
-    console.log(new Date().getDay());
-    var todaymm = new Date().getMonth()+1;
+    let todaymm = new Date().getMonth()+1;
     if(todaymm<10) {
         todaymm = '0' + todaymm;
     }
-    var today = todaymm + todaydd;
+    let today = todaymm.toString() + todaydd.toString();
 
-    x = xmlDoc.getElementsByTagName("den");
+    x = xmlDoc.getElementsByTagName("zaznam");
     for (let i = 0; i< x.length; i++) {
-        console.log(x[i].childNodes[0].nodeValue+ " " + xmlDoc.getElementsByTagName("SK")[i].childNodes[0].nodeValue);
-        if (x[i].childNodes[0].nodeValue === today) {
-            document.getElementById("nameday_area").innerHTML = "Meniny má "+xmlDoc.getElementsByTagName("SK")[i-3].childNodes[0].nodeValue;
+        let den = x[i].getElementsByTagName("den");
+        if (den[0].childNodes[0].nodeValue === today) {
+            console.log("HURA");
+            let skNarodeniny =  x[i].getElementsByTagName("SK")[0].childNodes[0].nodeValue;
+            document.getElementById("nameday_area").innerHTML ="Meniny má "+skNarodeniny;
             break;
         }
     }
