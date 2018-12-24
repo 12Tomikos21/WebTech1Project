@@ -1,35 +1,60 @@
-function loadXML() {
+function getNameday(date, div_area) {
     var xobj = new XMLHttpRequest();
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
-            getNameday(this);
+             getNamedayXML(this, date, div_area);
         }
     };
     xobj.open('GET', 'meniny.xml', true);
-    xobj.send(null);
+    xobj.send();
 }
+function getNamedayXML(xml, date, div_area) {
+    var xmlDoc = xml.responseXML;
+    var records = xmlDoc.getElementsByTagName("zaznam");
+    console.log("getNamedayXML: " + date + " " + div_area );
+    for (let i = 0; i< records.length; i++) {
+        let den = records[i].getElementsByTagName("den");
 
-function getNameday(xml) {
-    var x, xmlDoc = xml.responseXML;
-
-    let todaydd = new Date().getDate();
-    if(todaydd<10)
-        todaydd = '0' + todaydd;
-    let todaymm = new Date().getMonth()+1;
-    if(todaymm<10) {
-        todaymm = '0' + todaymm;
-    }
-    let today = todaymm.toString() + todaydd.toString();
-
-    x = xmlDoc.getElementsByTagName("zaznam");
-    for (let i = 0; i< x.length; i++) {
-        let den = x[i].getElementsByTagName("den");
-        if (den[0].childNodes[0].nodeValue === today) {
-            console.log("HURA");
-            let skNarodeniny =  x[i].getElementsByTagName("SK")[0].childNodes[0].nodeValue;
-            document.getElementById("nameday_area").innerHTML ="Meniny má "+skNarodeniny;
-            break;
+        if (den[0].childNodes[0].nodeValue === date) {
+            let skNameday = records[i].getElementsByTagName("SK")[0];
+            if (skNameday != null) {
+                document.getElementById(div_area).innerHTML = "Meniny má <b>" + skNameday.childNodes[0].nodeValue;+"</b>";
+            } else {
+                document.getElementById(div_area).innerHTML =  records[i].getElementsByTagName("SKsviatky")[0].childNodes[0].nodeValue;
+            }
+            return;
         }
     }
+    alert("Nenašiel sa dátum: " + date);
+    document.getElementById(div_area).innerHTML = "Nenašiel sa dátum";
 }
-loadXML();
+
+function addzero(number) {
+    console.log(number.toString().indexOf("0"));
+    if (number < 10 && number.toString().indexOf("0") === -1) {
+        console.log("Add zero: "+ number);
+        number = "0" + number;
+    }
+    return number;
+}
+
+function setTodayNameday(){
+    let todayDay = addzero(new Date().getDate());
+    let todayMonth = addzero(new Date().getMonth() + 1);
+    let today = todayMonth.toString() + todayDay.toString();
+    getNameday(today, "nameday_area");
+}
+function setNamedayFromInput(){
+    let date = document.getElementById('dateText').value;
+    console.log("setNamedayFromInput: " + date);
+    let array = date.match(/[0-9]+/g);
+    date = "";
+    for(let i = array.length - 1; i >= 0; i--){
+        date += addzero(array[i])
+    }
+    getNameday(date,"nameday_output");
+}
+
+document.getElementById("nameday_area").innerHTML = "Meniny má ";
+setTodayNameday();
+
