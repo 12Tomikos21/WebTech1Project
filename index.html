@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1>WebTech1 Projekt</h1>
-<div id="nameday_area"></div>
+<div id="nameday_area" class="p-2"></div>
 <div id="menu_area" class="menu-area">
     <div class="container">
         <div class="row">
@@ -24,10 +24,10 @@
                         <li class="active"><a href="index.html">Domov</a></li>
                         <li><a href="articles.html">Články</a></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="./Zabava/index.html" id="zabavaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zábava</a>
+                            <a class="dropdown-toggle" href="./Zabava/index.html" id="zabavaDropdown" role="button" aria-haspopup="true" aria-expanded="false">Zábava</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle" href="Zabava/Hry/index.html" id="hryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hry</a>
+                                    <a class="dropdown-toggle" href="Zabava/Hry/index.html" id="hryDropdown" role="button" aria-haspopup="true" aria-expanded="false">Hry</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a href="Zabava/Hry/Macko/index.html">Hra Macko</a></li>
                                         <li><a href="Zabava/Hry/Rener/index.html">Hra Rener</a></li>
@@ -42,6 +42,16 @@
         </div>
     </div>
 </div>
+<form>
+    <div class="form-inline">
+        <div class="form-group m-3">
+            <label for="dateText">Dátum</label>
+            <input type="text" class="form-control mr-3 ml-3" id="dateText" data-toggle="tooltip" title="Formát dátumu: DD.MM." aria-describedby="Date">
+            <button type="button" class="btn green" onclick="setNamedayFromInput()">Get</button>
+        </div>
+    </div>
+    <div id="nameday_output" class="m-3"></div>
+</form>
 <footer>Copyright: 2018 Andrej Macko, Ivan Rener, Tomáš Hodor</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
