@@ -28,7 +28,6 @@ function getNamedayXML(xml, date, div_area) {
     alert("Nenašiel sa dátum: " + date);
     document.getElementById(div_area).innerHTML = "Nenašiel sa dátum";
 }
-
 function addzero(number) {
     console.log(number.toString().indexOf("0"));
     if (number < 10 && number.toString().indexOf("0") === -1) {
@@ -37,7 +36,6 @@ function addzero(number) {
     }
     return number;
 }
-
 function setTodayNameday(){
     let todayDay = addzero(new Date().getDate());
     let todayMonth = addzero(new Date().getMonth() + 1);
@@ -57,4 +55,3 @@ function setNamedayFromInput(){
 
 document.getElementById("nameday_area").innerHTML = "Meniny má ";
 setTodayNameday();
-
