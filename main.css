@@ -42,10 +42,10 @@ footer {
 }
 
 .mainmenu .collapse ul ul, .mainmenu .collapse ul ul.dropdown-menu{
-    background:#1565C0;
+    background:#256D1F;
 }
 .mainmenu .collapse ul ul ul, .mainmenu .collapse ul ul ul.dropdown-menu{
-    background:#1E88E5;
+    background:#448E47;
 }
 
 .mainmenu{
@@ -62,8 +62,22 @@ footer {
 }
 
 #nameday_area{
-    background: #4CAF50;
-    text-align: right;
+    background:#4CAF50;
+    text-align:right;
+}
+
+#visit_counter{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+}
+#breadcrumbs{
+    background:#3C4048;
+    color:#fff;
+}
+#breadcrumbs a{
+    color:#fff;
 }
 
 @media only screen and (min-width: 767px) {
