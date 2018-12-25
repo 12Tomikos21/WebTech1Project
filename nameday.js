@@ -29,7 +29,6 @@ function getNamedayXML(xml, date, div_area) {
     document.getElementById(div_area).innerHTML = "Nenašiel sa dátum";
 }
 function addzero(number) {
-    console.log(number.toString().indexOf("0"));
     if (number < 10 && number.toString().indexOf("0") === -1) {
         console.log("Add zero: "+ number);
         number = "0" + number;
