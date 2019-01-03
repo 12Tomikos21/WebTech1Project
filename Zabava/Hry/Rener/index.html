@@ -1,53 +1,37 @@
 <!DOCTYPE html>
-<html lang="sk">
-<head>
-    <title>Hra Rener</title>
-    <link rel='shortcut icon' type='image/x-icon' href='../../../images/blog.ico'/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../../main.css" />
-</head>
-<body>
-<h1>Hra Rener</h1>
-<div id="nameday_area"></div>
-<div id="menu_area" class="menu-area">
-    <div class="container">
-        <div class="row">
-            <nav class="navbar navbar-light navbar-expand-lg mainmenu">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li><a href="../../../index.html">Domov</a></li>
-                        <li><a href="../../../articles.html">Články</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="../index.html" id="zabavaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zábava</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" href="index.html" id="hryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hry</a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li class="active"><a href="index.html">Hra Macko</a></li>
-                                        <li><a href="../Rener/index.html">Hra Rener</a></li>
-                                        <li><a href="../Hodor/index.html">Hra Hodor</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-</div>
-<p>Hello World</p>
-<footer>Copyright: 2018 Andrej Macko, Ivan Rener, Tomáš Hodor</footer>
+<html>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="../../../main.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Puzzle</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <div id="timer">
+    <h1 id="timePassed">00:00:00</h1>
+    <button type="button" name="Demo" onclick="showDemo()">Demo</button>
+  </div>
+  <div id="outerContainer">
+    <div id="container">
+      <!-- I used div's here instead of images because with img tag there is some bug on drag and i dont feel like debuging  -->
+      <div class="item" id="regionA" snapX="42" snapY="339" snapped="false"></div>
+      <div class="item" id="regionB" snapX="130" snapY="310" snapped="false"></div>
+      <div class="item" id="regionC" snapX="447" snapY="249" snapped="false"></div>
+      <div class="item" id="regionD" snapX="452" snapY="425" snapped="false"></div>
+      <div class="item" id="regionE" snapX="534" snapY="429" snapped="false"></div>
+      <div class="item" id="regionF" snapX="681" snapY="291" snapped="false"></div>
+      <div class="item" id="regionG" snapX="551" snapY="100" snapped="false"></div>
+      <div class="item" id="regionH" snapX="818" snapY="51" snapped="false"></div>
+      <div class="item" id="regionJ" snapX="1068" snapY="233" snapped="false"></div>
+      <div class="item" id="regionI" snapX="1096" snapY="189" snapped="false"></div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 </html>
