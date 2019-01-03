@@ -1,0 +1,99 @@
+html, body {
+	margin: 0;
+  padding: 0;
+}
+
+#outerContainer {
+}
+
+#container {
+  background: url('../img/hranice.png');
+  width: 1280px;
+  height: 650px;
+
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  overflow: hidden;
+  touch-action: none;
+  position: relative;
+}
+
+.item {
+  touch-action: none;
+  user-select: none;
+  position: absolute;
+  /*display: block;*/
+  /*border: 1px solid #000;*/
+}
+
+.item:active {
+  opacity: .75;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+/*========================================================*/
+/*--->>> Regions */
+/*========================================================*/
+#regionA {
+  background-image: url('../img/RegionA.png');
+  width: 108px;
+  height: 148px;
+}
+
+#regionB {
+  background-image: url('../img/RegionB.png');
+  width: 411px;
+  height: 193px;
+}
+
+#regionC {
+  background-image: url('../img/RegionC.png');
+  width: 294px;
+  height: 216px;
+}
+
+#regionD {
+  background-image: url('../img/RegionD.png');
+  width: 133px;
+  height: 101px;
+}
+
+#regionE {
+  background: url('../img/RegionE.png');
+  width: 414px;
+  height: 163px;
+}
+
+#regionF {
+  background: url('../img/RegionF.png');
+  width: 408px;
+  height: 242px;
+}
+
+#regionG {
+  background: url('../img/RegionG.png');
+  width: 355px;
+  height: 261px;
+}
+
+#regionH {
+  background: url('../img/RegionH.png');
+  width: 417px;
+  height: 317px;
+}
+
+#regionI {
+  background: url('../img/RegionI.png');
+  width: 60px;
+  height: 39px;
+}
+
+#regionJ {
+  background: url('../img/RegionJ.png');
+  width: 181px;
+  height: 256px;
+}

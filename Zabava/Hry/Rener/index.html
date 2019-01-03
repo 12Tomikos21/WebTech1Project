@@ -2,13 +2,15 @@
 <html lang="sk">
 <head>
     <base href="../../../index.html">
-    <title>Hra Rener</title>
+    <title>Puzzle</title>
     <link rel='shortcut icon' type='image/x-icon' href='images/blog.ico'/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Zabava/Hry/Rener/css/style.css" />
+
 </head>
 <body>
 <h1>Hra Rener</h1>
@@ -45,7 +47,25 @@
 </div>
 <div id="breadcrumbs">
 </div>
-<p>Hello World</p>
+<div id="timer">
+    <h1 id="timePassed">00:00:00</h1>
+    <button type="button" name="Demo" onclick="showDemo()">Demo</button>
+</div>
+<div id="outerContainer">
+    <div id="container">
+        <!-- I used div's here instead of images because with img tag there is some bug on drag and i dont feel like debuging  -->
+        <div class="item" id="regionA" snapX="42" snapY="339" snapped="false"></div>
+        <div class="item" id="regionB" snapX="130" snapY="310" snapped="false"></div>
+        <div class="item" id="regionC" snapX="447" snapY="249" snapped="false"></div>
+        <div class="item" id="regionD" snapX="452" snapY="425" snapped="false"></div>
+        <div class="item" id="regionE" snapX="534" snapY="429" snapped="false"></div>
+        <div class="item" id="regionF" snapX="681" snapY="291" snapped="false"></div>
+        <div class="item" id="regionG" snapX="551" snapY="100" snapped="false"></div>
+        <div class="item" id="regionH" snapX="818" snapY="51" snapped="false"></div>
+        <div class="item" id="regionJ" snapX="1068" snapY="233" snapped="false"></div>
+        <div class="item" id="regionI" snapX="1096" snapY="189" snapped="false"></div>
+    </div>
+</div>
 <footer>Copyright: 2018 Andrej Macko, Ivan Rener, Tomáš Hodor</footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -53,5 +73,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="nameday.js"></script>
 <script src="breadcrumbs.js"></script>
+<script src="Zabava/Hry/Rener/js/script.js"></script>
 </body>
 </html>
