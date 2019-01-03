@@ -29,5 +29,7 @@ window.localStorage.setItem("pages", JSON.stringify(pages_array));
 document.getElementById("breadcrumbs").innerHTML = "";
 for (let i = pages_array.length - 1; i >= 0 ; i--) {
     let name = getPageName(pages_array[i]);
-    document.getElementById('breadcrumbs').innerHTML += ' \< <a href=\"' + pages_array[i]+ '\">'+ name +'</a>';
+    if (i !== pages_array.length - 1)
+        document.getElementById('breadcrumbs').innerHTML += ' \< ';
+    document.getElementById('breadcrumbs').innerHTML += '<a href=\"' + pages_array[i]+ '\">'+ name +'</a>';
 }
