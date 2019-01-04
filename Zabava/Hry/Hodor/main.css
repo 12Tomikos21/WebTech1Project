@@ -1,0 +1,60 @@
+.puzzle{
+    position: absolute;
+    cursor: move;
+    border: 1px solid #000000;
+}
+.puzzle:hover{
+    cursor: move;
+}
+
+#game_area{
+    width: 501px;
+    height: 669px;
+    position: relative;
+}
+
+#puzzle1{
+    background-image: url("images/MariaA.jpg");
+    width: 167px;
+    height: 446px;
+}
+#puzzle2{
+    background-image: url("images/MariaB.jpg");
+    width: 58px;
+    height: 223px;
+}
+#puzzle3{
+    background-image: url("images/MariaC.jpg");
+    width: 276px;
+    height: 223px;
+}
+#puzzle4{
+    background-image: url("images/MariaD.jpg");
+    width: 167px;
+    height: 223px;
+}
+#puzzle5{
+    background-image: url("images/MariaE.jpg");
+    width: 167px;
+    height: 367px;
+}
+#puzzle6{
+    background-image: url("images/MariaF.jpg");
+    width: 167px;
+    height: 223px;
+}
+#puzzle7{
+    background-image: url("images/MariaG.jpg");
+    width: 243px;
+    height: 79px;
+}
+#puzzle8{
+    background-image: url("images/MariaH.jpg");
+    width: 76px;
+    height: 144px;
+}
+#puzzle9{
+    background-image: url("images/MariaI.jpg");
+    width: 91px;
+    height: 223px;
+}
