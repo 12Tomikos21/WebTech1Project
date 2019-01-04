@@ -1,7 +1,4 @@
-/*
-@TODO: 	Forbit interacting with snapped items
-Add dissabled interaction state in whole system
-*/
+
 
 window.onload = function() {
   let container = document.querySelector("#container");
@@ -16,14 +13,12 @@ window.onload = function() {
 
   let regions = document.getElementsByClassName("item");
 
-  //Initialize elements positions (can be random or 0 in these case)
+  
   for(let i = 0; i < regions.length; i++) {
-      //Initial elements position
       // regions[i].style.left = "0px";
       // regions[i].style.top = "0px";
       regions[i].style.left = Math.floor(Math.random() * 1000) + "px";
       regions[i].style.top = Math.floor(Math.random() * 500) + "px";
-      //Animation transition for demo button
       regions[i].style.transition = "transform .2s ease-in-out";
   }
   startTimer();
@@ -33,7 +28,6 @@ window.onload = function() {
 //===========================================================
     function showDemo(){
         let regions = document.getElementsByClassName("item");
-        //Foreach may or amy not work, for always does :D
         for(let i = 0; i < regions.length; i++) {
             //console.log(regions[i]);
           let snapX = parseInt(regions[i].getAttribute("snapX"));
@@ -56,21 +50,15 @@ window.onload = function() {
   var timePassed = 0;
 
   function startTimer() {
-    //Check if timer is already running
+    
     if(timer != null) return;
 
-    //Start timer
     timer = setInterval(function(){
-    //Create date object
     let date = new Date(null);
-    //Push our timestamp
     date.setSeconds(timePassed);
 
-    //Convert timestamp to string and cut year month and date from it since we dont need them
     let time = date.toISOString().substr(11, 8);
-      //Update our timer with time passed
       document.getElementById("timePassed").innerHTML = time;
-      //Increment time passed in seconds
       timePassed++;
     }, 1000);
   }
@@ -107,41 +95,12 @@ window.onload = function() {
         } else {
           console.log("doing something!");
 
-          /*activeItem.style.left*/
           activeItem.xOffset = 0;
           activeItem.yOffset = 0;
 
           activeItem.initialX = e.clientX - activeItem.xOffset - parseInt(e.target.style.left, 10);
           activeItem.initialY = e.clientY - activeItem.yOffset - parseInt(e.target.style.top, 10);
         }
-
-
-
-
-        //Canvas shit, dont touch (i may delte it later)
-        // // Get click coordinates
-        // var x = e.pageX - this.offsetLeft,
-        //     y = e.pageY - this.offsetTop,
-        //     w = ctx.canvas.width = this.width,
-        //     h = ctx.canvas.height = this.height,
-        //     alpha;
-
-        // // Draw image to canvas
-        // // and read Alpha channel value
-        // console.log(e.target.style.backgroundImage);
-        // ctx.drawImage(e.target.style.backgroundImage, 0, 0, w, h);
-        // //alpha = ctx.getImageData(x, y, 1, 1).data[3]; // [0]R [1]G [2]B [3]A
-
-
-
-
-
-
-
-
-
-
-
       }
     }
   }
@@ -184,7 +143,7 @@ window.onload = function() {
         console.log('Snap shit')
         setTranslate(snapX, snapY, e.target);
         dragEnd(e);
-        onSnap(e);//Callback
+        onSnap(e);
       }
 
   }
