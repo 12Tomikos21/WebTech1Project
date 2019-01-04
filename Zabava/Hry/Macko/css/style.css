@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header{
+
+    padding-left: 10px;
+    background-color: gray;
+}
+
+#wrapper {
+
+    background: url("../picture/canada.png") no-repeat;
+    width: 1960px;
+    height: 1080px;
+    /*overflow: hidden;*/
+    touch-action: none;
+    position: relative;
+    margin: 50px auto;
+    padding-top: 100px;
+    /*z-index: -999;*/
+
+}
+
+
+.state {
+    touch-action: none;
+    user-select: none;
+    position: absolute;
+    /*display: block;*/
+}
+
+.state:active {
+    opacity: .75;
+}
+
+.state:hover {
+    cursor: pointer;
+}
+
+
+
+#alberta1{
+    background-image: url("../picture/alberta1.png");
+    width: 81px;
+    height: 138px;
+}
+
+#british1{
+    background-image: url("../picture/british1.png");
+    width: 122px;
+    height: 173px;
+}
+
+#manitoba1{
+    background-image: url("../picture/manitoba1.png");
+    width: 90px;
+    height: 137px;
+}
+
+#newbruns1{
+    background-image: url("../picture/newbruns1.png");
+    width: 47px;
+    height: 44px;
+}
+
+#newfound1{
+    background-image: url("../picture/newfound1.png");
+    width: 165px;
+    height: 93px;
+}
+
+#northw1{
+    background-image: url("../picture/northw1.png");
+    width: 155px;
+    height: 221px;
+}
+
+#novascot1{
+    background-image: url("../picture/novascot1.png");
+    width: 35px;
+    height: 66px;
+}
+
+#nunavut1{
+    background-image: url("../picture/nunavut1.png");
+    width: 275px;
+    height: 288px;
+}
+
+#ontario1{
+    background-image: url("../picture/ontario1.png");
+    height: 153px;
+    width: 182px;
+}
+
+#quebec1{
+    background-image: url("../picture/quebec1.png");
+    height: 195px;
+    width: 183px;
+}
+
+#saskat1{
+    background-image: url("../picture/saskat1.png");
+    width: 70px;
+    height: 130px;
+}
+
+#yukon1{
+    background-image: url("../picture/yukon1.png");
+    height: 137px;
+    width: 103px;
+}
